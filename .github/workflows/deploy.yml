@@ -1,1 +1,4 @@
-deploy.yml
+name: Deploy
+on:
+  push:
+    branches: [main]
