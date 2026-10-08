@@ -49,12 +49,12 @@ export const MenuOverlay: React.FC<MenuOverlayProps> = ({
       className="fixed inset-0 z-40 bg-[#f9f7f2]/95 dark:bg-[#121110]/96 backdrop-blur-xl flex flex-col justify-between pt-24 pb-10 px-6 sm:px-12 md:px-20 overflow-y-auto animate-in fade-in duration-300 transition-colors"
     >
       <div className="max-w-5xl w-full mx-auto my-auto grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 lg:gap-16 pt-4 pb-6">
-        {/* Left Column: Work Section */}
+        {/* Left Column: Case Studies Section */}
         <div className="md:col-span-7 lg:col-span-8 flex flex-col">
           {/* Header - Equal weight to ABOUT */}
           <div className="flex items-center justify-between border-b border-[#ded9ce] dark:border-[#2a2824] pb-3 mb-5">
             <span className="font-mono-tech text-xs tracking-widest text-[#161513] dark:text-[#f4f1ea] font-semibold uppercase">
-              WORK
+              Case studies
             </span>
           </div>
 
@@ -134,7 +134,7 @@ export const MenuOverlay: React.FC<MenuOverlayProps> = ({
             <div>
               <div className="flex items-center justify-between border-b border-[#ded9ce] dark:border-[#2a2824] pb-3 mb-4">
                 <span className="font-mono-tech text-xs tracking-widest text-[#161513] dark:text-[#f4f1ea] font-semibold uppercase">
-                  PROFILE
+                  ABOUT
                 </span>
               </div>
 
@@ -154,10 +154,10 @@ export const MenuOverlay: React.FC<MenuOverlayProps> = ({
                   <div className="flex items-start min-w-0 pr-3 flex-1">
                     <div className="flex flex-col min-w-0">
                       <span className="font-serif-display text-lg sm:text-xl tracking-tight text-[#161513] dark:text-[#f4f1ea] group-hover:text-[#c83b2b] dark:group-hover:text-[#ff5442] group-hover:translate-x-1 transition-all duration-200 leading-snug">
-                        About
+                        Profile
                       </span>
                       <span className="font-mono-tech text-[10px] text-[#78746c] dark:text-[#9e998e] uppercase tracking-wider pt-0.5">
-                        Profile & Bio
+                        Bio
                       </span>
                     </div>
                   </div>
@@ -183,7 +183,7 @@ export const MenuOverlay: React.FC<MenuOverlayProps> = ({
                         Resume
                       </span>
                       <span className="font-mono-tech text-[10px] text-[#78746c] dark:text-[#9e998e] uppercase tracking-wider pt-0.5">
-                        Career & Chronology
+                        Career
                       </span>
                     </div>
                   </div>
@@ -209,7 +209,7 @@ export const MenuOverlay: React.FC<MenuOverlayProps> = ({
                         Skills
                       </span>
                       <span className="font-mono-tech text-[10px] text-[#78746c] dark:text-[#9e998e] uppercase tracking-wider pt-0.5">
-                        Capabilities & Expertise
+                        Competences
                       </span>
                     </div>
                   </div>
@@ -235,7 +235,7 @@ export const MenuOverlay: React.FC<MenuOverlayProps> = ({
                         Contact
                       </span>
                       <span className="font-mono-tech text-[10px] text-[#78746c] dark:text-[#9e998e] uppercase tracking-wider pt-0.5">
-                        Inquiries & In Touch
+                        Get in touch
                       </span>
                     </div>
                   </div>
@@ -299,7 +299,7 @@ export const MenuOverlay: React.FC<MenuOverlayProps> = ({
       {/* Bottom status bar */}
       <div className="max-w-5xl w-full mx-auto pt-5 border-t border-[#ded9ce] dark:border-[#2a2824] flex flex-col sm:flex-row items-center justify-between text-[10.5px] font-mono-tech text-[#8c877d] dark:text-[#78736a] gap-2">
         <span>© {new Date().getFullYear()} LYNE OLMEDO-REVAZ</span>
-        <span className="tracking-wider uppercase">Design Portfolio</span>
+        <span className="tracking-wider uppercase">Portfolio</span>
       </div>
     </div>
   );

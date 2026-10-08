@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { AboutData } from '../types';
 import { triggerHapticTick } from '../utils/haptics';
+import { useLightbox } from '../context/LightboxContext';
 import lynePortrait from '../assets/images/lyne_with_deer_1786870190197.jpg';
 
 interface AboutViewProps {
@@ -14,9 +15,12 @@ export const AboutView: React.FC<AboutViewProps> = ({
   targetSection,
   onBackToLanding,
 }) => {
-  // Left arrow or Esc to return
+  const { openLightbox } = useLightbox();
+
+  // Left arrow or Esc to return (unless lightbox is open)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
+      if (document.querySelector('#lightbox-close-button')) return;
       if (e.key === 'ArrowLeft' || e.key === 'Escape') {
         e.preventDefault();
         triggerHapticTick('light');
@@ -72,25 +76,20 @@ export const AboutView: React.FC<AboutViewProps> = ({
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 lg:gap-12 items-start">
             {/* Left Column: Composed Title with Overlapping Pill & Bio Text */}
             <div className="md:col-span-7 lg:col-span-8">
-              {/* Composed Headline + Overlapping Badge anchored directly to the 'n' */}
+              {/* Composed Headline + Overlapping Badge anchored directly to About */}
               <div className="relative inline-block mb-10 select-none">
                 <h1 className="font-serif-display text-7xl sm:text-7xl md:text-8xl lg:text-[96px] xl:text-[104px] font-normal tracking-tight text-[#161513] dark:text-[#f4f1ea] leading-[0.98]">
-                  <span className="block">Meet the</span>
-                  <span className="flex items-center gap-2.5 sm:gap-3.5 mt-1">
-                    <span className="inline-block w-10 sm:w-12 md:w-14 lg:w-16 h-[5px] sm:h-[5px] md:h-[6px] lg:h-[7px] bg-[#161513] dark:bg-[#f4f1ea] rounded-xs select-none mr-1.5 sm:mr-2" />
-                    <span className="inline-flex items-baseline">
-                      <span>Creat</span>
-                      {/* Anchor wrapper around the letter 'o' in "Creator" */}
-                      <span className="relative inline-block">
-                        <span>o</span>
-                        {/* Overlapping Pill Badge with -10deg rotation angle */}
-                        <span
-                          className="absolute top-[28px] sm:top-[27px] md:top-[29px] -left-[54px] sm:-left-[49px] md:-left-[51px] -translate-y-full z-10 origin-bottom-left transform -rotate-[10deg] hover:-rotate-[6deg] transition-transform duration-300 shadow-sm border border-[#d8d3c7] dark:border-[#38352f] bg-[#ede8df] dark:bg-[#24221e] rounded-full inline-flex items-center justify-center px-4.5 py-1.5 sm:px-5 sm:py-1 md:px-6 md:py-1.5 font-mono-tech text-[13.5px] sm:text-sm md:text-[14px] font-medium text-[#161513] dark:text-[#f4f1ea] tracking-wider whitespace-nowrap cursor-default pointer-events-auto"
-                        >
-                          Hi, I'm Lyne!
-                        </span>
+                  <span className="inline-flex items-baseline">
+                    <span>Abou</span>
+                    {/* Anchor wrapper around the letter 't' in "About" */}
+                    <span className="relative inline-block">
+                      <span>t</span>
+                      {/* Overlapping Pill Badge with -10deg rotation angle */}
+                      <span
+                        className="absolute top-[28px] sm:top-[27px] md:top-[29px] -left-[45px] sm:-left-[42px] md:-left-[45px] -translate-y-full z-10 origin-bottom-left transform -rotate-[10deg] hover:-rotate-[6deg] transition-transform duration-300 shadow-sm border border-[#d8d3c7] dark:border-[#38352f] bg-[#ede8df] dark:bg-[#24221e] rounded-full inline-flex items-center justify-center px-4.5 py-1.5 sm:px-5 sm:py-1 md:px-6 md:py-1.5 font-mono-tech text-[13.5px] sm:text-sm md:text-[14px] font-medium text-[#161513] dark:text-[#f4f1ea] tracking-wider whitespace-nowrap cursor-default pointer-events-auto"
+                      >
+                        Hi, I'm Lyne!
                       </span>
-                      <span>r</span>
                     </span>
                   </span>
                 </h1>
@@ -106,7 +105,10 @@ export const AboutView: React.FC<AboutViewProps> = ({
             {/* Portrait Card next to the text on the right */}
             <div className="md:col-span-5 lg:col-span-4 flex flex-col items-center md:items-end">
               <div className="relative w-full max-w-[260px] sm:max-w-[280px] md:max-w-[270px] lg:max-w-[300px] rounded-2xl overflow-hidden border border-[#ded8cc] dark:border-[#38352f] bg-[#eae5db] dark:bg-[#1c1b18] shadow-xs group">
-                <div className="relative aspect-3/4 w-full overflow-hidden bg-[#e0dbce] dark:bg-[#1f1d1a]">
+                <div
+                  className="relative aspect-3/4 w-full overflow-hidden bg-[#e0dbce] dark:bg-[#1f1d1a] cursor-zoom-in"
+                  onClick={() => openLightbox(lynePortrait, 'Lyne Olmedo with a deer in Nara')}
+                >
                   <img
                     src={lynePortrait}
                     alt="Lyne Olmedo with a deer in Nara"

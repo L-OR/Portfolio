@@ -1,5 +1,7 @@
 import { Project, AboutData } from '../types';
 import peerdomHeroImage from '../assets/images/peerdom_hero_comparison_1790835903852.jpg';
+import almanacBenchmarkImage from '../assets/images/almanac_benchmark_1791356530165.jpg';
+import competitiveBenchmarkImage from '../assets/images/competitive_benchmark_1791357165268.jpg';
 
 export const portfolioProjects: Project[] = [
   {
@@ -8,156 +10,182 @@ export const portfolioProjects: Project[] = [
     title: 'Almanac',
     client: 'Personal Project',
     year: '2026',
-    discipline: 'Design System & Editorial Platform',
-    tagline: 'Coming soon',
-    overview: 'A forward-looking digital publication and generative design system platform exploring the intersection of Swiss typography, archival editorial layout, and responsive spatial interfaces. Currently in active development for 2026.',
-    role: 'Lead Product Designer & Design Architect',
-    timeline: '6 months (2026)',
-    tools: ['Figma', 'TypeScript', 'Tailwind CSS', 'Design Tokens'],
-    team: 'Lyne Olmedo-Revaz, 2 Frontend Developers',
-    image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80',
-    imageAlt: 'Almanac design system and generative editorial canvas preview',
+    discipline: 'Financial Research Tool',
+    tagline: 'Product design for a historical event-probability engine',
+    overview: 'Designed a bias-free research tool for crypto traders, from idea to launch. Every stat answers three questions at a glance: up or down, by how much, and how much to trust it.',
+    role: 'Project Manager & Product Designer',
+    timeline: '2 Weeks',
+    tools: ['Stitch', 'Google AI Studio', 'Claude', 'Figma Weave'],
+    team: 'Personal Project',
+    image: almanacBenchmarkImage,
+    imageAlt: 'Almanac historical event-probability research engine interface',
     liveUrl: 'https://almanac.design',
-    liveUrlLabel: 'Explore Almanac Platform',
+    liveUrlLabel: 'Visit Almanac',
+    liveDisabled: true,
+    ctaEyebrow: 'DEPLOYED PRODUCT',
+    ctaDescription: 'Coming soon :)',
     themeAccent: '#c83b2b',
     steps: [
       {
         number: '01',
         phaseLabel: 'INITIATION',
         title: 'Context',
-        subtitle: 'CLASSICAL PRINT VS. FLUID VIEWPORTS',
-        description: 'PROBLEM Editorial web design often abandons classical typography rhythms and proportional grid systems. MARKET INSIGHTS Modern digital publications lack tactile structure. Almanac bridges Swiss archival layout with modern responsive design. GOALS Establish an 8pt Swiss baseline grid, fluid typographic hierarchy, and tokenized design system primitives. CONSTRAINTS Web performance constraints, multi-device viewport scaling, variable typeface licensing.',
+        subtitle: 'FOLKLORE DRESSED UP AS ANALYSIS',
+        description: 'PROBLEM: "Up-tober." "July is a red month." Seasonality claims spread through X threads and hand-built charts, with no hit-rate and no sample size. Traders can\'t tell a real pattern from noise. MARKET INSIGHTS: I benchmarked six tools: TradingView Seasonals, CoinGlass, Barchart, Brighter Data, Konseki and rt1m. Most offer dense dashboards limited to daily, weekly, monthly or quarterly views. None shows how far a result can be trusted. Two put their best features behind a paywall: Brighter Data (€59/month, and it asks users to confirm their own bias first) and Konseki ($49/year). GOALS: Build a free, transparent tool that shows the real historical odds after any recurring event. CONSTRAINTS: Solo project, no budget · AI tools used throughout · V1 limited to Bitcoin and calendar events',
         breakdown: [
           {
             label: 'PROBLEM',
-            text: 'Editorial web design often abandons classical typography rhythms and proportional grid systems.'
+            text: '"Up-tober." "July is a red month." Seasonality claims spread through X threads and hand-built charts, with no hit-rate and no sample size. Traders can\'t tell a real pattern from noise.'
           },
           {
             label: 'MARKET INSIGHTS',
-            text: 'Modern digital publications lack tactile structure. Almanac bridges Swiss archival layout with modern responsive design.'
+            text: 'I benchmarked six tools: TradingView Seasonals, CoinGlass, Barchart, Brighter Data, Konseki and rt1m. Most offer dense dashboards limited to daily, weekly, monthly or quarterly views. None shows how far a result can be trusted. Two put their best features behind a paywall: Brighter Data (€59/month, and it asks users to confirm their own bias first) and Konseki ($49/year).'
           },
           {
             label: 'GOALS',
-            text: 'Establish an 8pt Swiss baseline grid, fluid typographic hierarchy, and tokenized design system primitives.'
+            text: 'Build a free, transparent tool that shows the real historical odds after any recurring event.'
           },
           {
             label: 'CONSTRAINTS',
-            text: 'Web performance constraints, multi-device viewport scaling, variable typeface licensing.'
+            text: 'Solo project, no budget · AI tools used throughout · V1 limited to Bitcoin and calendar events'
           }
         ],
         infographicType: 'image',
-        imagePlaceholder: true,
-        imageAlt: 'Baseline Grid & Typographic Scale Analysis',
+        image: almanacBenchmarkImage,
+        imageAlt: 'Six-Tool Competitive Market Insights & Benchmark Audit',
         graphicDetails: {
-          caption: 'Baseline Grid & Typographic Scale Analysis'
+          caption: 'Six-Tool Competitive Market Insights & Benchmark Audit'
         }
       },
       {
         number: '02',
         phaseLabel: 'PLANNING',
         title: 'Scope',
-        subtitle: 'TOKEN PIPELINE & EDITORIAL ARCHITECTURE',
-        description: 'SCOPE Typographic scales · Variable glyph calibration · Modular component library · Documentation site. PRIORITIES Standardizing core tokens (spacing, typography, elevation) before authoring complex editorial layout blocks.',
+        subtitle: 'UP OR DOWN?',
+        description: 'SCOPE: Product concept · Competitive benchmarking · 3 user personas · Product principles · UX audit · Methodology page. PRIORITIES: I mapped every audience pain point against who already solves it. Most needs were already covered by competitors (the "dumb zone"). The winning zone was narrow: visible sample size, traceable methodology, bias-free design. So I built the product around trust rather than feature count. V1 stayed small on purpose: free browsing, account-gated favorites, no paid tiers, no export. PERSONAS: Markus, full-time trader: needs a clear answer in under 30 seconds. Priya, quant hobbyist: needs to see the math. Jordan, content creator: needs stats he can cite.',
         breakdown: [
           {
             label: 'SCOPE',
-            text: 'Typographic scales · Variable glyph calibration · Modular component library · Documentation site'
+            text: 'Product concept · Competitive benchmarking · 3 user personas · Product principles · UX audit · Methodology page'
           },
           {
             label: 'PRIORITIES',
-            text: 'Standardizing core tokens (spacing, typography, elevation) before authoring complex editorial layout blocks.'
+            text: 'I mapped every audience pain point against who already solves it. Most needs were already covered by competitors (the "dumb zone"). The winning zone was narrow: visible sample size, traceable methodology, bias-free design. So I built the product around trust rather than feature count. V1 stayed small on purpose: free browsing, account-gated favorites, no paid tiers, no export.'
+          },
+          {
+            label: 'PERSONAS',
+            text: 'Markus, full-time trader: needs a clear answer in under 30 seconds.\nPriya, quant hobbyist: needs to see the math.\nJordan, content creator: needs stats he can cite.'
           }
         ],
         infographicType: 'image',
-        imagePlaceholder: true,
-        imageAlt: 'Editorial Architecture & Layout Hierarchy',
+        image: competitiveBenchmarkImage,
+        imageAlt: 'Audience Pain Points & Feature Matrix Benchmark',
         graphicDetails: {
-          caption: 'Editorial Architecture & Layout Hierarchy'
-        }
+          caption: 'Audience Pain Points & Feature Matrix Benchmark'
+        },
+        additionalImages: [
+          {
+            image: 'https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=80',
+            imageAlt: 'Traders, Quant Hobbyist & Creator Personas Matrix',
+            caption: 'Traders, Quant Hobbyist & Creator Personas Matrix'
+          }
+        ]
       },
       {
         number: '03',
         phaseLabel: 'REVIEW',
         title: 'Alignment',
-        subtitle: 'STAKEHOLDER & TYPOGRAPHER CONSENSUS',
-        description: 'STAKEHOLDER FEEDBACK Presented interactive type specimens and optical weight scaling tests to editorial directors and font engineers to secure cross-disciplinary buy-in.',
+        subtitle: 'FROM FOLKLORE TO PRODUCT PRINCIPLES',
+        description: 'STRATEGY: I turned the research into three product values: Reveal, don\'t predict · Show the receipts · Bias out, data in. Together they mean the product shows history, never gives advice, and always shows its evidence. RULES SET EARLY: Each rule answers a user need. Probability always leads, so the first thing a user sees is the answer. The headline magnitude is the median, not the mean, because BTC returns are skewed by outliers. Sample size is always visible, with a warning at n < 10, so a thin sample never looks like a strong pattern. Copy never uses "signal," "buy," "sell" or "should," because the tool informs decisions and doesn\'t make them. NAME DECISION: I ruled out "Trader\'s Almanac" for its closeness to the long-running Stock Trader\'s Almanac. Almanac evokes an old book that seems to know what\'s coming, while the product delivers verified statistics.',
         breakdown: [
           {
-            label: 'STAKEHOLDER FEEDBACK',
-            text: 'Presented interactive type specimens and optical weight scaling tests to editorial directors and font engineers to secure cross-disciplinary buy-in.'
+            label: 'STRATEGY',
+            text: 'I turned the research into three product values: Reveal, don\'t predict · Show the receipts · Bias out, data in. Together they mean the product shows history, never gives advice, and always shows its evidence.'
+          },
+          {
+            label: 'RULES SET EARLY',
+            text: 'Each rule answers a user need:\n- Probability always leads, so the first thing a user sees is the answer.\n- The headline magnitude is the median, not the mean, because BTC returns are skewed by outliers.\n- Sample size is always visible, with a warning at n < 10, so a thin sample never looks like a strong pattern.\n- Copy never uses "signal," "buy," "sell" or "should," because the tool informs decisions and doesn\'t make them.'
+          },
+          {
+            label: 'NAME DECISION',
+            text: 'I ruled out "Trader\'s Almanac" for its closeness to the long-running Stock Trader\'s Almanac. Almanac evokes an old book that seems to know what\'s coming, while the product delivers verified statistics.'
           }
         ],
         infographicType: 'image',
-        imagePlaceholder: true,
-        imageAlt: 'Typographic Specimen & Optical Scale Review',
+        image: 'https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?auto=format&fit=crop&w=1200&q=80',
+        imageAlt: 'Product Principles: Reveal, Don\'t Predict & Show The Receipts',
         graphicDetails: {
-          caption: 'Typographic Specimen & Optical Scale Review'
+          caption: 'Product Principles: Reveal, Don\'t Predict & Show The Receipts'
         }
       },
       {
         number: '04',
         phaseLabel: 'EXECUTION',
         title: 'Delivery',
-        subtitle: 'COMPONENTS, TOKENS & DOCUMENTATION',
-        description: 'LEADERSHIP Directed sprint cycles across design and development, translating Figma components into verified, production-ready code primitives. DESIGN DECISIONS Monospaced technical telemetry paired with humanist serif display headings and quiet neutral backgrounds. DELIVERABLES Figma component library · Token pipeline in JSON · Interactive documentation portal · Production CSS tokens.',
+        subtitle: 'Consistency and Clarity',
+        description: 'USABILITY AUDIT: I walked through the full user flow and fixed nine inconsistencies. The recurring one: the same event showed different direction and magnitude on different pages, which breaks trust faster than any missing feature. I resolved it by enforcing a single source of truth for every stat.\n\nDESIGN DECISIONS:\nOne screen, one answer. The headline stat card leads with probability, then typical move, then sample size and date range, so users get all three answers in one glance.\nReliability built into the interface. Small-sample warnings sit on the stat itself, not in a footnote.\nNo signup wall. Users can browse and query freely. An account is only needed to save favorites.\nMethod for those who want the math. I rebuilt the Methodology page and rewrote the landing, events and footer copy so the same terms mean the same thing everywhere.',
         breakdown: [
           {
-            label: 'LEADERSHIP',
-            text: 'Directed sprint cycles across design and development, translating Figma components into verified, production-ready code primitives.'
+            label: 'USABILITY AUDIT',
+            text: 'I walked through the full user flow and fixed nine inconsistencies. The recurring one: the same event showed different direction and magnitude on different pages, which breaks trust faster than any missing feature. I resolved it by enforcing a single source of truth for every stat.'
           },
           {
             label: 'DESIGN DECISIONS',
-            text: 'Monospaced technical telemetry paired with humanist serif display headings and quiet neutral backgrounds.'
-          },
-          {
-            label: 'DELIVERABLES',
-            text: 'Figma component library · Token pipeline in JSON · Interactive documentation portal · Production CSS tokens'
+            text: 'One screen, one answer. The headline stat card leads with probability, then typical move, then sample size and date range, so users get all three answers in one glance.\nReliability built into the interface. Small-sample warnings sit on the stat itself, not in a footnote.\nNo signup wall. Users can browse and query freely. An account is only needed to save favorites.\nMethod for those who want the math. I rebuilt the Methodology page and rewrote the landing, events and footer copy so the same terms mean the same thing everywhere.'
           }
         ],
         infographicType: 'image',
-        imagePlaceholder: true,
-        imageAlt: 'Design Tokens & Component Library Delivery',
+        image: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=1200&q=80',
+        imageAlt: 'One Screen, One Answer UI Design Architecture',
         graphicDetails: {
-          caption: 'Design Tokens & Component Library Delivery'
-        }
+          caption: 'One Screen, One Answer UI Design Architecture'
+        },
+        additionalImages: [
+          {
+            image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80',
+            imageAlt: 'Single Source of Truth Usability & Consistency Audit',
+            caption: 'Single Source of Truth Usability & Consistency Audit'
+          },
+          {
+            image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80',
+            imageAlt: 'Sub-Event Comparison Tables & Receipts Slide-out',
+            caption: 'Sub-Event Comparison Tables & Receipts Slide-out'
+          }
+        ]
       },
       {
         number: '05',
         phaseLabel: 'RELEASE',
         title: 'Impact',
-        subtitle: 'SYSTEM ROLLOUT & ADOPTION',
-        description: 'CUSTOMER FEEDBACK Design teams praised the intuitive modular scales and speed of assembly, cutting page build times significantly. ROLLOUT Deployed across internal publication properties and shared as open-access architectural documentation for digital typographers.',
+        subtitle: 'VERSION 1 IS READY!',
+        description: 'OUTCOME: V1 is built and ready to be shipped, delivered in two weeks as a solo project.',
         breakdown: [
           {
-            label: 'CUSTOMER FEEDBACK',
-            text: 'Design teams praised the intuitive modular scales and speed of assembly, cutting page build times significantly.'
-          },
-          {
-            label: 'ROLLOUT',
-            text: 'Deployed across internal publication properties and shared as open-access architectural documentation for digital typographers.'
+            label: 'OUTCOME',
+            text: 'V1 is built and ready to be shipped, delivered in two weeks as a solo project.'
           }
         ],
         infographicType: 'image',
-        imagePlaceholder: true,
-        imageAlt: 'System Rollout & Documentation Metrics',
+        image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1200&q=80',
+        imageAlt: 'V1 Built and Ready for Release',
         graphicDetails: {
-          caption: 'System Rollout & Documentation Metrics'
+          caption: 'V1 Built and Ready for Release'
         }
       },
       {
         number: '06',
         phaseLabel: 'RETROSPECTIVE',
         title: 'Reflection',
-        subtitle: 'SCALING VARIABLE TYPE IN CODE',
-        description: "WHAT WAS LEFT Advanced WebGPU optical sizing shaders remain in prototype stage for a future version 2.0 release. WHAT I'D DO DIFFERENTLY With more engineering capacity upfront, I would have integrated automated visual regression testing into the CI pipeline earlier.",
+        subtitle: 'AI-POWERED WORKFLOW',
+        description: "WHAT WAS LEFT: The visual identity is still being finalized and will be revisited. The next version will add more event categories and connect the back end to real APIs. The product will be shipped as soon as these points are completed. WHAT I LEARNED: I learned to prototype with AI, going from research to a working prototype in two weeks. Google AI Studio turned out to be the best fit for the project's budget. I also found that including hand-drawn sketches of the interface in my prompts made the results more accurate, without needing a long prompt.",
         breakdown: [
           {
             label: 'WHAT WAS LEFT',
-            text: 'Advanced WebGPU optical sizing shaders remain in prototype stage for a future version 2.0 release.'
+            text: 'The visual identity is still being finalized and will be revisited. The next version will add more event categories and connect the back end to real APIs. The product will be shipped as soon as these points are completed.'
           },
           {
-            label: "WHAT I'D DO DIFFERENTLY",
-            text: 'With more engineering capacity upfront, I would have integrated automated visual regression testing into the CI pipeline earlier.'
+            label: 'WHAT I LEARNED',
+            text: "I learned to prototype with AI, going from research to a working prototype in two weeks. Google AI Studio turned out to be the best fit for the project's budget. I also found that including hand-drawn sketches of the interface in my prompts made the results more accurate, without needing a long prompt."
           }
         ],
         infographicType: 'none'
@@ -169,7 +197,7 @@ export const portfolioProjects: Project[] = [
     code: '02',
     title: 'Peerdom',
     client: 'Peerdom AG',
-    year: '2025',
+    year: '2024',
     discipline: 'Organizational Mapping Software',
     tagline: 'Brand identity and landing page for Saas start-up',
     overview: 'Rebranded a SaaS start-up in 3 months. The identity was adopted across its marketing website, social media and newsletter, well beyond the M&A campaign it was built for.',
@@ -179,8 +207,10 @@ export const portfolioProjects: Project[] = [
     team: 'Developer, Paid Acquisition Specialist, Copywriter',
     image: peerdomHeroImage,
     imageAlt: 'Peerdom Before vs. After Landing Page Redesign',
-    liveUrl: 'https://peerdom.com',
-    liveUrlLabel: 'Visit Peerdom Platform',
+    liveUrl: 'https://www.figma.com/proto/Ba80uc5QW7XmEeHRYN4Hz3/Peerdom?node-id=92-22386&t=T8JSgHXUepukrtc7-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1',
+    liveUrlLabel: 'View Prototype',
+    ctaEyebrow: 'PROTOTYPE',
+    ctaDescription: "Check out the interactive prototype of Peerdom's Merger & Acquisition landing page.",
     themeAccent: '#c83b2b',
     steps: [
       {
@@ -208,7 +238,7 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        imagePlaceholder: true,
+        image: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80',
         imageAlt: 'Competitor Color Analysis',
         graphicDetails: {
           caption: 'Competitor Color Analysis'
@@ -231,7 +261,7 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        imagePlaceholder: true,
+        image: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1200&q=80',
         imageAlt: 'Scope & Brand Strategy',
         graphicDetails: {
           caption: 'Scope & Brand Strategy'
@@ -250,11 +280,18 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        imagePlaceholder: true,
+        image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80',
         imageAlt: 'Stakeholder Alignment & Strategy Presentation',
         graphicDetails: {
           caption: 'Stakeholder Alignment & Strategy Presentation'
-        }
+        },
+        additionalImages: [
+          {
+            image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80',
+            imageAlt: 'Visual Identity Sneak Peek & Founder Consensus',
+            caption: 'Visual Identity Sneak Peek & Founder Consensus'
+          }
+        ]
       },
       {
         number: '04',
@@ -277,11 +314,23 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        imagePlaceholder: true,
+        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
         imageAlt: 'Landing Page & Campaign Deliverables',
         graphicDetails: {
           caption: 'Landing Page & Campaign Deliverables'
-        }
+        },
+        additionalImages: [
+          {
+            image: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=1200&q=80',
+            imageAlt: 'Sprint Wireframing & UI Component System',
+            caption: 'Sprint Wireframing & UI Component System'
+          },
+          {
+            image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
+            imageAlt: 'M&A Campaign Creatives & Paid Ads Delivery',
+            caption: 'M&A Campaign Creatives & Paid Ads Delivery'
+          }
+        ]
       },
       {
         number: '05',
@@ -300,11 +349,18 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        imagePlaceholder: true,
+        image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80',
         imageAlt: 'Marketing Rollout & Customer Feedback',
         graphicDetails: {
           caption: 'Marketing Rollout & Customer Feedback'
-        }
+        },
+        additionalImages: [
+          {
+            image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80',
+            imageAlt: 'Omnichannel Newsletter & Social Media Adoption',
+            caption: 'Omnichannel Newsletter & Social Media Adoption'
+          }
+        ]
       },
       {
         number: '06',
@@ -340,9 +396,13 @@ export const portfolioProjects: Project[] = [
     tools: ['Figma', 'Illustrator', 'Photoshop', 'InDesign', 'Premiere Pro', 'Google Suite'],
     team: 'N.A. (Personal project for UX Design Diploma)',
     image: 'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=80',
-    imageAlt: 'FlyUX flight booking experience interface',
-    liveUrl: 'https://flyux-design.aero',
-    liveUrlLabel: 'View FlyUX Prototype',
+    imageAlt: 'FlyUX FigJam Research & Design Board',
+    embedUrl: 'https://embed.figma.com/board/zWVAz4xg0wcB5ybiCAsgMQ/Fly-UX?node-id=0-1&embed-host=share',
+    figmaUrl: 'https://www.figma.com/board/zWVAz4xg0wcB5ybiCAsgMQ/Fly-UX?node-id=0-1&t=b1FH71pi4mOJVluM-1',
+    liveUrl: 'https://www.figma.com/proto/Ore9Cib3qlUr33VtL9BK6G/Fly-UX?node-id=2-2&starting-point-node-id=2%3A2&t=KvJpAul6epB3OZHC-1',
+    liveUrlLabel: 'View Prototype',
+    ctaEyebrow: 'PROTOTYPE',
+    ctaDescription: "Check out the interactive prototype for desktop of FlyUX Airline's flight booking process.",
     themeAccent: '#c83b2b',
     steps: [
       {
@@ -369,12 +429,7 @@ export const portfolioProjects: Project[] = [
             text: 'Fictional airline · User testing run remotely because of the COVID-19 pandemic'
           }
         ],
-        infographicType: 'image',
-        imagePlaceholder: true,
-        imageAlt: 'FlyUX Booking Experience Research & Scope',
-        graphicDetails: {
-          caption: 'FlyUX Booking Experience Research & Scope'
-        }
+        infographicType: 'none'
       },
       {
         number: '02',
@@ -401,11 +456,28 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        imagePlaceholder: true,
+        image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80',
         imageAlt: 'User Research, Usability Testing & Personas',
         graphicDetails: {
           caption: 'User Research, Usability Testing & Personas'
-        }
+        },
+        additionalImages: [
+          {
+            image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
+            imageAlt: 'Competitive Benchmark & Airline Convention Audit',
+            caption: 'Competitive Benchmark & Airline Convention Audit'
+          },
+          {
+            image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80',
+            imageAlt: 'Online Booking Survey & Quantitative Data Analysis',
+            caption: 'Online Booking Survey & Quantitative Data Analysis'
+          },
+          {
+            image: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1200&q=80',
+            imageAlt: 'Remote Usability Testing Sessions & Traveler Personas',
+            caption: 'Remote Usability Testing Sessions & Traveler Personas'
+          }
+        ]
       },
       {
         number: '03',
@@ -428,11 +500,18 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        imagePlaceholder: true,
+        image: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=1200&q=80',
         imageAlt: 'Affinity Diagram & 15-Step Journey Map',
         graphicDetails: {
           caption: 'Affinity Diagram & 15-Step Journey Map'
-        }
+        },
+        additionalImages: [
+          {
+            image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80',
+            imageAlt: '15-Step Booking Journey Pain Point Analysis',
+            caption: '15-Step Booking Journey Pain Point Analysis'
+          }
+        ]
       },
       {
         number: '04',
@@ -459,11 +538,18 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        imagePlaceholder: true,
+        image: 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=1200&q=80',
         imageAlt: 'User Flow Diagram & Five-Screen Architecture',
         graphicDetails: {
           caption: 'User Flow Diagram & Five-Screen Architecture'
-        }
+        },
+        additionalImages: [
+          {
+            image: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=1200&q=80',
+            imageAlt: 'Screen State Sketches & Mid-Fidelity Interactive Prototype',
+            caption: 'Screen State Sketches & Mid-Fidelity Interactive Prototype'
+          }
+        ]
       },
       {
         number: '05',
@@ -478,7 +564,7 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        imagePlaceholder: true,
+        image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80',
         imageAlt: 'Developer-Ready Wireframes & Architecture Specs',
         graphicDetails: {
           caption: 'Developer-Ready Wireframes & Architecture Specs'
@@ -489,11 +575,15 @@ export const portfolioProjects: Project[] = [
         phaseLabel: 'RETROSPECTIVE',
         title: 'Reflection',
         subtitle: 'THE FULL UX PROCESS',
-        description: 'WHAT I LEARNED This project let me run the full UX design process on my own. I learned to conduct complete UX research, extract concrete insights from the data, and turn them into user-friendly design decisions.',
+        description: "WHAT I LEARNED This project let me run the full UX design process on my own. I learned to conduct complete UX research, extract concrete insights from the data, and turn them into user-friendly design decisions. WHAT I'D DO DIFFERENTLY In 2026, I could take the project further, and faster, by also handing over an interactive prototype.",
         breakdown: [
           {
             label: 'WHAT I LEARNED',
             text: 'This project let me run the full UX design process on my own. I learned to conduct complete UX research, extract concrete insights from the data, and turn them into user-friendly design decisions.'
+          },
+          {
+            label: "WHAT I'D DO DIFFERENTLY",
+            text: 'In 2026, I could take the project further, and faster, by also handing over an interactive prototype.'
           }
         ],
         infographicType: 'none'
@@ -515,8 +605,10 @@ export const portfolioProjects: Project[] = [
     team: 'Digital Ecosystem Lead, Partner Agency (development)',
     image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80',
     imageAlt: 'MyMenuIQ digital nutrition service interface for Nestle',
-    liveUrl: 'https://nestle.com/nutrition/mymenu-iq',
-    liveUrlLabel: 'Learn More About MyMenuIQ',
+    liveUrl: 'https://www.figma.com/proto/vXUrn6Ap4NGgwKJ8NjPip7/MAGGI-Web?page-id=0%3A1&type=design&node-id=836-5822&viewport=2197%2C-853%2C0.22&t=ro1ObmlWpthapnUt-1&scaling=min-zoom&starting-point-node-id=836%3A5822&show-proto-sidebar=1',
+    liveUrlLabel: 'View Prototype',
+    ctaEyebrow: 'PROTOTYPE',
+    ctaDescription: 'Check out the interactive prototype for mobile of MyMenu IQ™.',
     themeAccent: '#c83b2b',
     steps: [
       {
@@ -543,12 +635,7 @@ export const portfolioProjects: Project[] = [
             text: "Integrated into Maggi's website, so the brand and typography had to connect with it"
           }
         ],
-        infographicType: 'image',
-        imagePlaceholder: true,
-        imageAlt: 'Agency Proposal Audit & Meal Scoring Goals',
-        graphicDetails: {
-          caption: 'Agency Proposal Audit & Meal Scoring Goals'
-        }
+        infographicType: 'none'
       },
       {
         number: '02',
@@ -567,7 +654,7 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        imagePlaceholder: true,
+        image: 'https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?auto=format&fit=crop&w=1200&q=80',
         imageAlt: 'User Flow Architecture & Core Journeys',
         graphicDetails: {
           caption: 'User Flow Architecture & Core Journeys'
@@ -586,11 +673,18 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        imagePlaceholder: true,
+        image: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1200&q=80',
         imageAlt: 'Mid-Fidelity Wireframe Validation',
         graphicDetails: {
           caption: 'Mid-Fidelity Wireframe Validation'
-        }
+        },
+        additionalImages: [
+          {
+            image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80',
+            imageAlt: 'Stakeholder Alignment & Experience Refinement',
+            caption: 'Stakeholder Alignment & Experience Refinement'
+          }
+        ]
       },
       {
         number: '04',
@@ -613,11 +707,28 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        imagePlaceholder: true,
+        image: 'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&w=1200&q=80',
         imageAlt: 'High-Fidelity Product Delivery & Design System',
         graphicDetails: {
           caption: 'High-Fidelity Product Delivery & Design System'
-        }
+        },
+        additionalImages: [
+          {
+            image: 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=1200&q=80',
+            imageAlt: 'Reimagined User Flow & Recipe Journey Diagram',
+            caption: 'Reimagined User Flow & Recipe Journey Diagram'
+          },
+          {
+            image: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=1200&q=80',
+            imageAlt: 'Responsive Web & Mobile Wireframe Architecture',
+            caption: 'Responsive Web & Mobile Wireframe Architecture'
+          },
+          {
+            image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80',
+            imageAlt: 'Brand Identity & Approachable Warm Palette System',
+            caption: 'Brand Identity & Approachable Warm Palette System'
+          }
+        ]
       },
       {
         number: '05',
@@ -635,11 +746,15 @@ export const portfolioProjects: Project[] = [
             text: '82% of consumers who used the meal score agreed it helped them choose better, healthier side dishes. (Nestlé, April 2021)'
           }
         ],
-        infographicType: 'image',
-        imagePlaceholder: true,
-        imageAlt: 'Platform Rollout & Consumer Adoption Metrics',
+        infographicType: 'metrics',
         graphicDetails: {
-          caption: 'Platform Rollout & Consumer Adoption Metrics'
+          tag: 'ROLLOUT & ADOPTION TELEMETRY',
+          caption: 'Nestlé MyMenuIQ verified launch adoption & impact metrics (April 2021)',
+          metrics: [
+            { label: 'Platforms', value: '13' },
+            { label: 'Countries', value: '6' },
+            { label: 'Positive Consumer Feedback', value: '82%' }
+          ]
         }
       },
       {
@@ -671,7 +786,7 @@ export const aboutData: AboutData = {
   statementHeadline: 'Meet the designer',
   statementPill: "Hi, I'm Lyne!",
   bioParagraphs: [
-    "Multifaceted professional with 5+ years' experience crafting product design systems and brand identities for SaaS and global brands. Led end-to-end projects from research and strategy to pixel-perfect execution in agile, fast paced, and remote work environments; skilled at turning complex business problems into clear, user-centered solutions and leveraging AI tools to accelerate workflows."
+    "I've worked across brand and digital product for the past 5 years. For me, a brand and a product are one experience. That's why I design ecosystems. I act as both strategist and gardien: I keep the brand and the user experience consistent on every touchpoint, and I plan how the product evolves."
   ],
   philosophyQuotes: [
     {

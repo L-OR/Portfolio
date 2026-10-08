@@ -1,5 +1,7 @@
 import React from 'react';
 import { ProjectStep } from '../types';
+import { MetricsInfographic } from './MetricsInfographic';
+import { useLightbox } from '../context/LightboxContext';
 
 interface StepInfographicProps {
   step: ProjectStep;
@@ -11,48 +13,129 @@ export const StepInfographic: React.FC<StepInfographicProps> = ({
   accentColor = '#c83b2b',
 }) => {
   const { infographicType, graphicDetails, number, title } = step;
+  const { openLightbox } = useLightbox();
 
   if (infographicType === 'none' || !infographicType) {
     return null;
   }
 
-  if (infographicType === 'image' || step.image || step.imagePlaceholder) {
-    return (
-      <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden border border-[#ded8cb] dark:border-[#2e2b24] shadow-sm bg-[#f2eee5]/80 dark:bg-[#181715]/80 flex flex-col justify-between">
-        <div className="relative overflow-hidden w-full flex-1 flex items-center justify-center bg-[#eae5db]/60 dark:bg-[#1a1916]/80 p-6 sm:p-8">
-          {step.image ? (
-            <img
-              src={step.image}
-              alt={step.imageAlt || step.title}
-              referrerPolicy="no-referrer"
-              className="w-full h-auto object-contain max-h-[380px] mx-auto block"
+  if (infographicType === 'figma-embed' || step.embedUrl) {
+    const embedSrc = step.embedUrl || (graphicDetails as { embedUrl?: string })?.embedUrl;
+    if (embedSrc) {
+      return (
+        <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden border border-[#ded8cb] dark:border-[#2e2b24] shadow-sm bg-[#f2eee5]/80 dark:bg-[#181715]/80 flex flex-col justify-between">
+          <div className="relative overflow-hidden w-full flex-1">
+            <iframe
+              src={embedSrc}
+              title={step.title}
+              className="w-full h-full border-0 block"
+              allowFullScreen
+              allow="fullscreen; clipboard-read; clipboard-write"
+              loading="lazy"
             />
-          ) : (
-            /* Neutral gray picture placeholder matching Swiss aesthetic */
-            <div className="w-full h-full min-h-[220px] rounded-xl border border-dashed border-[#c5bfb2] dark:border-[#38352e] bg-[#dfdad0]/60 dark:bg-[#201e1a]/80 flex flex-col items-center justify-center p-6 text-center">
-              <div className="w-14 h-14 rounded-xl border border-[#bcb6a8] dark:border-[#3a3730] bg-[#d3cdc0]/70 dark:bg-[#292723] flex items-center justify-center mb-3 text-[#6e6a61] dark:text-[#9e998e] shadow-xs">
-                <svg className="w-7 h-7 opacity-75" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
+          </div>
+        </div>
+      );
+    }
+  }
+
+  if (infographicType === 'metrics') {
+    return <MetricsInfographic step={step} accentColor={accentColor} />;
+  }
+
+  if (infographicType === 'image' || step.image || step.imagePlaceholder || step.additionalImages) {
+    const imageList: { image: string; imageAlt?: string; caption?: string; tag?: string }[] = [];
+    if (step.image) {
+      imageList.push({
+        image: step.image,
+        imageAlt: step.imageAlt || step.title,
+        caption: step.graphicDetails?.caption || step.imageAlt || 'Project Visual Artifact',
+        tag: step.graphicDetails?.tag,
+      });
+    }
+    if (step.additionalImages && step.additionalImages.length > 0) {
+      imageList.push(...step.additionalImages);
+    }
+
+    if (imageList.length === 0) {
+      const num = parseInt(step.number, 10) || 1;
+      const fallbacks = [
+        {
+          image: 'https://images.unsplash.com/photo-1541701494587-cb58502866ab?auto=format&fit=crop&w=1200&q=80',
+          caption: 'Context & Problem Space Research Artifact',
+        },
+        {
+          image: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1200&q=80',
+          caption: 'Planning & Scope Architecture Matrix',
+        },
+        {
+          image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80',
+          caption: 'Review & Stakeholder Alignment Specimen',
+        },
+        {
+          image: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=1200&q=80',
+          caption: 'Execution & Delivery System Implementation',
+        },
+        {
+          image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
+          caption: 'Release & Impact Adoption Telemetry',
+        },
+        {
+          image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1200&q=80',
+          caption: 'Retrospective & Design Reflection Artifact',
+        },
+      ];
+      const selected = fallbacks[(num - 1) % fallbacks.length] || fallbacks[0];
+      imageList.push({
+        image: selected.image,
+        imageAlt: step.imageAlt || step.graphicDetails?.caption || `${step.title} Artifact`,
+        caption: step.graphicDetails?.caption || step.imageAlt || selected.caption,
+        tag: step.graphicDetails?.tag,
+      });
+    }
+
+    return (
+      <div className="flex flex-col gap-6 w-full">
+        {imageList.map((imgItem, idx) => (
+          <div
+            key={idx}
+            className="relative w-full aspect-4/3 rounded-2xl overflow-hidden border border-[#ded8cb] dark:border-[#2e2b24] shadow-sm bg-[#f2eee5]/80 dark:bg-[#181715]/80 flex flex-col justify-between group"
+          >
+            <div className="relative overflow-hidden w-full flex-1 p-0">
+              <div
+                className="relative w-full h-full min-h-[240px] sm:min-h-[300px] overflow-hidden group cursor-zoom-in"
+                onClick={() => openLightbox(imgItem.image, imgItem.imageAlt || imgItem.caption || step.title)}
+              >
+                <img
+                  src={imgItem.image}
+                  alt={imgItem.imageAlt || imgItem.caption || step.title}
+                  referrerPolicy="no-referrer"
+                  className="w-full h-full object-cover block transition-transform duration-500 group-hover:scale-[1.02]"
+                />
+                <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity bg-black/60 backdrop-blur-xs text-white px-2.5 py-1 rounded-full font-mono-tech text-[9.5px] flex items-center gap-1.5 pointer-events-none shadow-sm">
+                  <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                  </svg>
+                  <span>Fullscreen</span>
+                </div>
               </div>
-              <span className="font-mono-tech text-xs uppercase tracking-wider text-[#57534c] dark:text-[#b5b0a5] font-semibold mb-1">
-                PROJECT IMAGE PLACEHOLDER
-              </span>
-              <span className="font-serif-display italic text-xs text-[#8c877d] dark:text-[#78736a] max-w-xs">
-                Visual artifact for Phase {step.number} — {step.title}
-              </span>
             </div>
-          )}
-        </div>
-        <div className="px-4 sm:px-6 py-3 border-t border-[#ded8cb] dark:border-[#2e2b24] bg-[#f9f7f2]/95 dark:bg-[#161513]/95 flex flex-wrap items-center justify-between gap-2 font-mono-tech text-[10px] text-[#7a7670] dark:text-[#9e998e]">
-          <span className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#c83b2b] dark:bg-[#ff5442]" />
-            <span>{step.graphicDetails?.caption || step.imageAlt || 'Project Visual Artifact'}</span>
-          </span>
-          {step.graphicDetails?.tag ? (
-            <span className="uppercase">{step.graphicDetails.tag}</span>
-          ) : null}
-        </div>
+            <div className="px-4 sm:px-6 py-3 border-t border-[#ded8cb] dark:border-[#2e2b24] bg-[#f9f7f2]/95 dark:bg-[#161513]/95 flex flex-wrap items-center justify-between gap-2 font-mono-tech text-[10px] text-[#7a7670] dark:text-[#9e998e]">
+              <span className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#c83b2b] dark:bg-[#ff5442]" />
+                <span>{imgItem.caption || imgItem.imageAlt || 'Project Visual Artifact'}</span>
+              </span>
+              <button
+                type="button"
+                onClick={() => openLightbox(imgItem.image, imgItem.imageAlt || imgItem.caption || step.title)}
+                className="inline-flex items-center gap-1 uppercase hover:text-[#c83b2b] dark:hover:text-[#ff5442] transition-colors cursor-pointer"
+              >
+                <span>Fullscreen</span>
+                <span>↗</span>
+              </button>
+            </div>
+          </div>
+        ))}
       </div>
     );
   }

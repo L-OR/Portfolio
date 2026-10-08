@@ -3,6 +3,7 @@ import { Project } from '../types';
 import { StepInfographic } from './StepInfographic';
 import { CreativeProcessThread } from './CreativeProcessThread';
 import { triggerHapticTick } from '../utils/haptics';
+import { useLightbox } from '../context/LightboxContext';
 
 interface ProjectDetailProps {
   project: Project;
@@ -15,6 +16,7 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
   onBackToLanding,
   onNavigateNextProject,
 }) => {
+  const { openLightbox } = useLightbox();
   const containerRef = useRef<HTMLDivElement>(null);
   const processSectionRef = useRef<HTMLDivElement>(null);
   const processHeaderRef = useRef<HTMLDivElement>(null);
@@ -108,26 +110,70 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
             {project.overview}
           </p>
 
-          {/* Top Hero Image Banner */}
-          {project.image && (
+          {/* Top Hero Image Banner / FigJam Embed */}
+          {(project.embedUrl || project.image) && (
             <div
               id="project-top-hero-image-container"
               className="my-10 relative w-full rounded-2xl overflow-hidden border border-[#ded8cb] dark:border-[#2e2b24] shadow-sm bg-[#f2eee5]/80 dark:bg-[#181715]/80"
             >
               <div className="relative overflow-hidden w-full">
-                <img
-                  id="project-top-hero-image"
-                  src={project.image}
-                  alt={project.imageAlt || project.title}
-                  referrerPolicy="no-referrer"
-                  className="w-full h-auto object-contain max-h-[640px] mx-auto block"
-                />
+                {project.embedUrl ? (
+                  <iframe
+                    id="project-top-hero-embed"
+                    src={project.embedUrl}
+                    title={`${project.title} FigJam Board`}
+                    className="w-full h-[520px] sm:h-[620px] md:h-[720px] border-0 block bg-[#f2eee5] dark:bg-[#181715]"
+                    allowFullScreen
+                    allow="fullscreen; clipboard-read; clipboard-write"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div
+                    className="relative w-full overflow-hidden group cursor-zoom-in"
+                    onClick={() => project.image && openLightbox(project.image, project.imageAlt || project.title)}
+                  >
+                    <img
+                      id="project-top-hero-image"
+                      src={project.image}
+                      alt={project.imageAlt || project.title}
+                      referrerPolicy="no-referrer"
+                      className="w-full h-auto object-cover max-h-[640px] mx-auto block transition-transform duration-500 group-hover:scale-[1.01]"
+                    />
+                    <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity bg-black/60 backdrop-blur-xs text-white px-2.5 py-1 rounded-full font-mono-tech text-[9.5px] flex items-center gap-1.5 pointer-events-none shadow-sm">
+                      <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
+                      </svg>
+                      <span>Fullscreen</span>
+                    </div>
+                  </div>
+                )}
               </div>
               <div className="px-4 sm:px-6 py-3 border-t border-[#ded8cb] dark:border-[#2e2b24] bg-[#f9f7f2]/95 dark:bg-[#161513]/95 flex flex-wrap items-center justify-between gap-2 font-mono-tech text-[10px] text-[#7a7670] dark:text-[#9e998e]">
                 <span className="flex items-center gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#c83b2b] dark:bg-[#ff5442]" />
                   <span>{project.imageAlt || 'Project Visual Artifact'}</span>
                 </span>
+                {project.image && !project.embedUrl ? (
+                  <button
+                    type="button"
+                    onClick={() => openLightbox(project.image!, project.imageAlt || project.title)}
+                    className="inline-flex items-center gap-1 font-mono-tech text-[10.5px] uppercase tracking-wider text-[#161513] dark:text-[#f4f1ea] hover:text-[#c83b2b] dark:hover:text-[#ff5442] transition-colors cursor-pointer"
+                  >
+                    <span>Fullscreen</span>
+                    <span>↗</span>
+                  </button>
+                ) : (project.figmaUrl || project.embedUrl) ? (
+                  <a
+                    id="project-open-in-figma-link"
+                    href={project.figmaUrl || project.embedUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-1.5 font-mono-tech text-[10.5px] uppercase tracking-wider text-[#161513] dark:text-[#f4f1ea] hover:text-[#c83b2b] dark:hover:text-[#ff5442] transition-colors cursor-pointer font-medium"
+                  >
+                    <span>Open in Figma</span>
+                    <span className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">↗</span>
+                  </a>
+                ) : null}
               </div>
             </div>
           )}
@@ -316,26 +362,38 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
               <div className="flex items-center gap-2 mb-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#c83b2b] dark:bg-[#ff5442]" />
                 <span className="font-mono-tech text-[10px] tracking-widest text-[#78746c] dark:text-[#9e998e] uppercase font-semibold">
-                  FINAL DESTINATION // DEPLOYED SYSTEM
+                  {project.ctaEyebrow || 'FINAL DESTINATION // DEPLOYED SYSTEM'}
                 </span>
               </div>
               <h4 className="font-serif-display text-2xl sm:text-3xl text-[#161513] dark:text-[#f4f1ea] mb-1">
                 {project.title}
               </h4>
               <p className="font-sans-swiss text-xs sm:text-sm text-[#5f5c54] dark:text-[#a8a398]">
-                Explore the live product, interactive documentation, and full design specification.
+                {project.ctaDescription || 'Explore the live product, interactive documentation, and full design specification.'}
               </p>
             </div>
 
             <a
               id="project-live-external-link"
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-[#161513] dark:bg-[#f4f1ea] text-[#f9f7f2] dark:text-[#121110] hover:bg-[#c83b2b] dark:hover:bg-[#ff5442] dark:hover:text-[#f4f1ea] transition-all font-sans-swiss text-xs font-semibold uppercase tracking-wider whitespace-nowrap cursor-pointer shadow-xs"
+              href={project.liveDisabled ? undefined : project.liveUrl}
+              target={project.liveDisabled ? undefined : "_blank"}
+              rel={project.liveDisabled ? undefined : "noopener noreferrer"}
+              aria-disabled={project.liveDisabled ? "true" : undefined}
+              tabIndex={project.liveDisabled ? -1 : undefined}
+              onClick={(e) => {
+                if (project.liveDisabled) {
+                  e.preventDefault();
+                }
+              }}
+              title={project.liveDisabled ? "Deployment pending — coming soon" : undefined}
+              className={
+                project.liveDisabled
+                  ? "group inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-[#161513]/25 dark:bg-[#f4f1ea]/20 text-[#161513]/40 dark:text-[#f4f1ea]/40 border border-[#ded8cb] dark:border-[#38352d] opacity-50 filter saturate-0 cursor-not-allowed select-none transition-all font-sans-swiss text-xs font-semibold uppercase tracking-wider whitespace-nowrap shadow-none"
+                  : "group inline-flex items-center gap-3 px-7 py-3.5 rounded-full bg-[#161513] dark:bg-[#f4f1ea] text-[#f9f7f2] dark:text-[#121110] hover:bg-[#c83b2b] dark:hover:bg-[#ff5442] dark:hover:text-[#f4f1ea] transition-all font-sans-swiss text-xs font-semibold uppercase tracking-wider whitespace-nowrap cursor-pointer shadow-xs"
+              }
             >
               <span>{project.liveUrlLabel || 'Launch Live Application'}</span>
-              <span className="group-hover:translate-x-1 transition-transform">↗</span>
+              <span className={project.liveDisabled ? "opacity-30" : "group-hover:translate-x-1 transition-transform"}>↗</span>
             </a>
           </div>
         </div>

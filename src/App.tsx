@@ -12,6 +12,7 @@ import { LandingDial } from './components/LandingDial';
 import { ProjectDetail } from './components/ProjectDetail';
 import { AboutView } from './components/AboutView';
 import { triggerHapticTick } from './utils/haptics';
+import { LightboxProvider } from './context/LightboxContext';
 
 export default function App() {
   const [currentView, setCurrentView] = useState<ViewType>('landing');
@@ -54,51 +55,53 @@ export default function App() {
   };
 
   return (
-    <div className="relative min-h-screen bg-[#f9f7f2] dark:bg-[#121110] text-[#161513] dark:text-[#f4f1ea] font-sans-swiss overflow-x-hidden selection:bg-[#161513] selection:text-[#f9f7f2] dark:selection:bg-[#f4f1ea] dark:selection:text-[#121110] transition-colors duration-250">
-      {/* 1. Persistent Global Header */}
-      <Header
-        currentView={currentView}
-        menuOpen={menuOpen}
-        onToggleMenu={handleToggleMenu}
-        onNavigateHome={handleNavigateHome}
-      />
+    <LightboxProvider>
+      <div className="relative min-h-screen bg-[#f9f7f2] dark:bg-[#121110] text-[#161513] dark:text-[#f4f1ea] font-sans-swiss overflow-x-hidden selection:bg-[#161513] selection:text-[#f9f7f2] dark:selection:bg-[#f4f1ea] dark:selection:text-[#121110] transition-colors duration-250">
+        {/* 1. Persistent Global Header */}
+        <Header
+          currentView={currentView}
+          menuOpen={menuOpen}
+          onToggleMenu={handleToggleMenu}
+          onNavigateHome={handleNavigateHome}
+        />
 
-      {/* 2. Full-Screen Menu Overlay */}
-      <MenuOverlay
-        isOpen={menuOpen}
-        projects={portfolioProjects}
-        activeProjectId={activeProjectId}
-        onClose={() => setMenuOpen(false)}
-        onSelectProject={handleNavigateToProject}
-        onSelectAbout={handleSelectAbout}
-      />
+        {/* 2. Full-Screen Menu Overlay */}
+        <MenuOverlay
+          isOpen={menuOpen}
+          projects={portfolioProjects}
+          activeProjectId={activeProjectId}
+          onClose={() => setMenuOpen(false)}
+          onSelectProject={handleNavigateToProject}
+          onSelectAbout={handleSelectAbout}
+        />
 
-      {/* 3. Main Views */}
-      <main className="relative w-full">
-        {currentView === 'landing' && (
-          <LandingDial
-            projects={portfolioProjects}
-            activeProjectId={activeProjectId}
-            onSelectProject={handleSelectProject}
-            onNavigateToProject={handleNavigateToProject}
-          />
-        )}
+        {/* 3. Main Views */}
+        <main className="relative w-full">
+          {currentView === 'landing' && (
+            <LandingDial
+              projects={portfolioProjects}
+              activeProjectId={activeProjectId}
+              onSelectProject={handleSelectProject}
+              onNavigateToProject={handleNavigateToProject}
+            />
+          )}
 
-        {currentView === 'project' && (
-          <ProjectDetail
-            project={activeProject}
-            onBackToLanding={handleNavigateHome}
-          />
-        )}
+          {currentView === 'project' && (
+            <ProjectDetail
+              project={activeProject}
+              onBackToLanding={handleNavigateHome}
+            />
+          )}
 
-        {currentView === 'about' && (
-          <AboutView
-            data={aboutData}
-            targetSection={targetSection}
-            onBackToLanding={handleNavigateHome}
-          />
-        )}
-      </main>
-    </div>
+          {currentView === 'about' && (
+            <AboutView
+              data={aboutData}
+              targetSection={targetSection}
+              onBackToLanding={handleNavigateHome}
+            />
+          )}
+        </main>
+      </div>
+    </LightboxProvider>
   );
 }

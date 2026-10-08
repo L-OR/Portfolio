@@ -5,7 +5,7 @@ export interface ProjectStep {
   phaseLabel?: string;
   description: string;
   breakdown?: { label: string; text: string }[];
-  infographicType?: 'ambient-dial' | 'grid-taxonomy' | 'acoustic-wave' | 'patient-journey' | 'horology-mesh' | 'schematic-nodes' | 'minimal-editorial' | 'image' | 'none';
+  infographicType?: 'ambient-dial' | 'grid-taxonomy' | 'acoustic-wave' | 'patient-journey' | 'horology-mesh' | 'schematic-nodes' | 'minimal-editorial' | 'image' | 'metrics' | 'none';
   graphicDetails?: {
     tag?: string;
     caption?: string;
@@ -16,6 +16,12 @@ export interface ProjectStep {
   image?: string;
   imageAlt?: string;
   imagePlaceholder?: boolean | string;
+  additionalImages?: {
+    image: string;
+    imageAlt?: string;
+    caption?: string;
+    tag?: string;
+  }[];
 }
 
 export interface Project {
@@ -33,8 +39,13 @@ export interface Project {
   team?: string;
   image?: string;
   imageAlt?: string;
+  embedUrl?: string;
+  figmaUrl?: string;
   liveUrl: string;
   liveUrlLabel?: string;
+  liveDisabled?: boolean;
+  ctaEyebrow?: string;
+  ctaDescription?: string;
   steps: ProjectStep[];
   themeAccent?: string;
 }
