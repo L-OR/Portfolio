@@ -2,7 +2,7 @@ import { Project, AboutData } from '../types';
 import peerdomHeroImage from '../assets/images/Peerdom_Landing-page-before-after.png';
 import almanacBenchmarkImage from '../assets/images/Almanac_home.png';
 import competitiveBenchmarkImage from '../assets/images/Almanac_Product-Roadmap.jpg';
-
+import mymenuiqThumbnail from '../assets/images/MyMenuIQ_Thumbnail.png';
 export const portfolioProjects: Project[] = [
   {
     id: 'almanac',
@@ -603,7 +603,7 @@ export const portfolioProjects: Project[] = [
     timeline: '1 year, part-time',
     tools: ['Figma', 'Illustrator', 'Photoshop'],
     team: 'Digital Ecosystem Lead, Partner Agency (development)',
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80',
+    image: mymenuiqThumbnail,
     imageAlt: 'MyMenuIQ digital nutrition service interface for Nestle',
     liveUrl: 'https://www.figma.com/proto/vXUrn6Ap4NGgwKJ8NjPip7/MAGGI-Web?page-id=0%3A1&type=design&node-id=836-5822&viewport=2197%2C-853%2C0.22&t=ro1ObmlWpthapnUt-1&scaling=min-zoom&starting-point-node-id=836%3A5822&show-proto-sidebar=1',
     liveUrlLabel: 'View Prototype',
