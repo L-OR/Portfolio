@@ -1,6 +1,6 @@
 import { Project, AboutData } from '../types';
 import peerdomHeroImage from '../assets/images/peerdom_hero_comparison_1790835903852.jpg';
-import almanacBenchmarkImage from '../assets/images/almanac_benchmark_1791356530165.jpg';
+import almanacBenchmarkImage from '../assets/images/Almanac_home.png';
 import competitiveBenchmarkImage from '../assets/images/competitive_benchmark_1791357165268.jpg';
 
 export const portfolioProjects: Project[] = [
