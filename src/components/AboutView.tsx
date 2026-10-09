@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { AboutData } from '../types';
 import { triggerHapticTick } from '../utils/haptics';
 import { useLightbox } from '../context/LightboxContext';
-import lynePortrait from '../assets/images/lyne_with_deer_1786870190197.jpg';
+import lynePortrait from '../assets/images/Lyne_Image_lnc3x7.jpeg';
 
 interface AboutViewProps {
   data: AboutData;
