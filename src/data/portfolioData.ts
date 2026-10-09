@@ -3,6 +3,15 @@ import peerdomHeroImage from '../assets/images/Peerdom_Landing-page-before-after
 import almanacBenchmarkImage from '../assets/images/Almanac_home.png';
 import competitiveBenchmarkImage from '../assets/images/Almanac_Product-Roadmap.jpg';
 import mymenuiqThumbnail from '../assets/images/MyMenuIQ_Thumbnail.png';
+import flyuxPersonas from '../assets/images/FlyUX_personas.png';
+import flyuxBenchmark from '../assets/images/FlyUX_benchmark.png';
+import flyuxSurvey from '../assets/images/FlyUX_survey.png';
+import flyuxAffinity from '../assets/images/FlyUX_Affinity-diagram.png';
+import flyuxJourney from '../assets/images/FlyUX_Customer-Journey-Map.png';
+import flyuxFlow from '../assets/images/FlyUX_Flow-Diagram.png';
+import flyuxSketch1 from '../assets/images/FlyUX_sketch1.png';
+import flyuxSketch2 from '../assets/images/FlyUX_sketch2.png';
+import flyuxHandover from '../assets/images/FlyUX_hand-over.png';
 export const portfolioProjects: Project[] = [
   {
     id: 'almanac',
