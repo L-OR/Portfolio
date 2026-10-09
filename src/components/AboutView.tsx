@@ -80,13 +80,13 @@ export const AboutView: React.FC<AboutViewProps> = ({
               <div className="relative inline-block mb-10 select-none">
                 <h1 className="font-serif-display text-7xl sm:text-7xl md:text-8xl lg:text-[96px] xl:text-[104px] font-normal tracking-tight text-[#161513] dark:text-[#f4f1ea] leading-[0.98]">
                   <span className="inline-flex items-baseline">
-                    <span>Abou</span>
-                    {/* Anchor wrapper around the letter 't' in "About" */}
+                    <span>About me</span>
+                    {/* Anchor wrapper for overlapping pill badge */}
                     <span className="relative inline-block">
-                      <span>t</span>
                       {/* Overlapping Pill Badge with -10deg rotation angle */}
                       <span
-                        className="absolute top-[28px] sm:top-[27px] md:top-[29px] -left-[45px] sm:-left-[42px] md:-left-[45px] -translate-y-full z-10 origin-bottom-left transform -rotate-[10deg] hover:-rotate-[6deg] transition-transform duration-300 shadow-sm border border-[#d8d3c7] dark:border-[#38352f] bg-[#ede8df] dark:bg-[#24221e] rounded-full inline-flex items-center justify-center px-4.5 py-1.5 sm:px-5 sm:py-1 md:px-6 md:py-1.5 font-mono-tech text-[13.5px] sm:text-sm md:text-[14px] font-medium text-[#161513] dark:text-[#f4f1ea] tracking-wider whitespace-nowrap cursor-default pointer-events-auto"
+                        className="absolute top-[28px] sm:top-[27px] md:top-[29px] -left-[88px] -translate-y-full z-10 origin-top transform -rotate-[10deg] hover:-rotate-[6deg] transition-transform duration-300 shadow-sm border border-[#d8d3c7] dark:border-[#38352f] bg-[#ede8df] dark:bg-[#24221e] rounded-full inline-flex items-center justify-center px-4.5 py-1.5 sm:px-5 sm:py-1 md:px-6 md:py-1.5 font-mono-tech text-[13.5px] sm:text-sm md:text-[14px] font-medium text-[#161513] dark:text-[#f4f1ea] tracking-wider whitespace-nowrap cursor-default pointer-events-auto"
+                        style={{ transformOrigin: 'top center' }}
                       >
                         Hi, I'm Lyne!
                       </span>

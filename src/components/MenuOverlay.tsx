@@ -130,11 +130,11 @@ export const MenuOverlay: React.FC<MenuOverlayProps> = ({
         {/* Right Column: About Section & Appearance Controls */}
         <div className="md:col-span-5 lg:col-span-4 flex flex-col justify-between border-t md:border-t-0 md:border-l border-[#ded9ce] dark:border-[#2a2824] pt-8 md:pt-0 md:pl-10 lg:pl-12">
           <div className="space-y-6 sm:space-y-8">
-            {/* Header for ABOUT Section */}
+            {/* Header for PROFILE Section */}
             <div>
               <div className="flex items-center justify-between border-b border-[#ded9ce] dark:border-[#2a2824] pb-3 mb-4">
                 <span className="font-mono-tech text-xs tracking-widest text-[#161513] dark:text-[#f4f1ea] font-semibold uppercase">
-                  ABOUT
+                  PROFILE
                 </span>
               </div>
 
@@ -154,7 +154,7 @@ export const MenuOverlay: React.FC<MenuOverlayProps> = ({
                   <div className="flex items-start min-w-0 pr-3 flex-1">
                     <div className="flex flex-col min-w-0">
                       <span className="font-serif-display text-lg sm:text-xl tracking-tight text-[#161513] dark:text-[#f4f1ea] group-hover:text-[#c83b2b] dark:group-hover:text-[#ff5442] group-hover:translate-x-1 transition-all duration-200 leading-snug">
-                        Profile
+                        About
                       </span>
                       <span className="font-mono-tech text-[10px] text-[#78746c] dark:text-[#9e998e] uppercase tracking-wider pt-0.5">
                         Bio
