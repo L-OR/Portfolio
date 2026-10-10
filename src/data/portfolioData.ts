@@ -702,16 +702,16 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        image: mymenuiqMedfi,
-        imageAlt: 'Mid-fidelity wireframes',
+        image: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=1200&q=80',
+        imageAlt: 'Sketching',
         graphicDetails: {
-          caption: 'Mid-fidelity wireframes'
+          caption: 'Sketching:'
         },
         additionalImages: [
           {
-            image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80',
-            imageAlt: 'Stakeholder Alignment & Experience Refinement',
-            caption: 'Stakeholder Alignment & Experience Refinement'
+            image: mymenuiqMedfi,
+            imageAlt: 'Mid-fidelity wireframes,
+            caption: 'Mid-fidelity wireframes'
           }
         ]
       },
