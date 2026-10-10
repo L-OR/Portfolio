@@ -1,6 +1,9 @@
 import { Project, AboutData } from '../types';
-import peerdomHeroImage from '../assets/images/Peerdom_Landing-page-before-after.png';
 import mymenuiqThumbnail from '../assets/images/MyMenuIQ_Thumbnail.png';
+import mymenuiqFlow from '../assets/images/MyMenuIQ_flow.png';
+import mymenuiqMedfi from '../assets/images/MyMenuIQ_med-fi_screens_desktop.png';
+import mymenuiqHifi from '../assets/images/MyMenuIQ_hi-fi_screens_desktop.png';
+import mymenuiqMobile from '../assets/images/MyMenuIQ_hi-res_mobile.png';
 import flyuxPersonas from '../assets/images/FlyUX_personas.png';
 import flyuxBenchmark from '../assets/images/FlyUX_benchmark.png';
 import flyuxSurvey from '../assets/images/FlyUX_survey.png';
@@ -11,6 +14,7 @@ import flyuxSketch1 from '../assets/images/FlyUX_sketch1.png';
 import flyuxSketch2 from '../assets/images/FlyUX_sketch2.png';
 import flyuxHandover from '../assets/images/FlyUX_hand-over.png';
 import flyuxUsability from '../assets/images/FlyUX_Usability-test.png';
+import peerdomHeroImage from '../assets/images/Peerdom_Landing-page-before-after.png';
 import peerdomBenchmark from '../assets/images/Peerdom_Color-competitive-benchmark.png';
 import peerdomStrategy from '../assets/images/Peerdom_brand-strategy.png';
 import peerdomBrandBA from '../assets/images/Peerdom_brand-before-after.png';
@@ -679,10 +683,10 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        image: 'https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?auto=format&fit=crop&w=1200&q=80',
-        imageAlt: 'User Flow Architecture & Core Journeys',
+        image: mymenuiqFlow,
+        imageAlt: 'User flow',
         graphicDetails: {
-          caption: 'User Flow Architecture & Core Journeys'
+          caption: 'User flow'
         }
       },
       {
@@ -698,10 +702,10 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        image: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=1200&q=80',
-        imageAlt: 'Mid-Fidelity Wireframe Validation',
+        image: mymenuiqMedfi,
+        imageAlt: 'Mid-fidelity wireframes',
         graphicDetails: {
-          caption: 'Mid-Fidelity Wireframe Validation'
+          caption: 'Mid-fidelity wireframes'
         },
         additionalImages: [
           {
@@ -732,16 +736,16 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        image: 'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&w=1200&q=80',
-        imageAlt: 'High-Fidelity Product Delivery & Design System',
+        image: mymenuiqHifi,
+        imageAlt: 'High-fidelity prototype for desktop',
         graphicDetails: {
-          caption: 'High-Fidelity Product Delivery & Design System'
+          caption: 'High-fidelity prototype for desktop'
         },
         additionalImages: [
           {
-            image: 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=1200&q=80',
-            imageAlt: 'Reimagined User Flow & Recipe Journey Diagram',
-            caption: 'Reimagined User Flow & Recipe Journey Diagram'
+            image: mymenuiqMobile,
+            imageAlt: 'High-fidelity mobile screens',
+            caption: 'High-fidelity mobile screens'
           },
           {
             image: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=1200&q=80',
