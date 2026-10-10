@@ -13,7 +13,15 @@ import flyuxSketch1 from '../assets/images/FlyUX_sketch1.png';
 import flyuxSketch2 from '../assets/images/FlyUX_sketch2.png';
 import flyuxHandover from '../assets/images/FlyUX_hand-over.png';
 import flyuxUsability from '../assets/images/FlyUX_Usability-test.png';
-import PeerdomBenchmark from '../assets/images/Peerdom_Color-competitive-benchmark.png';
+import peerdomBenchmark from '../assets/images/Peerdom_Color-competitive-benchmark.png';
+import peerdomStrategy from '../assets/images/Peerdom_brand-strategy.png';
+import peerdomBrandBA from '../assets/images/Peerdom_brand-before-after.png';
+import peerdomColorConcept from '../assets/images/Peerdom_color-concept.png';
+import peerdomPalette from '../assets/images/Peerdom_color-palette.png';
+import peerdomLogoBA from '../assets/images/Peerdom_logo-before-after.png';
+import peerdomLogos from '../assets/images/Peerdom_logos.png';
+import peerdomEvolution from '../assets/images/Peerdom_evolution.png';
+import peerdomFavicon from '../assets/images/Peerdom_favicon.png';
 export const portfolioProjects: Project[] = [
   {
     id: 'almanac',
@@ -249,7 +257,7 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        image: PeerdomBenchmark,
+        image: peerdomBenchmark,
         imageAlt: 'Competitor Color Analysis',
         graphicDetails: {
           caption: 'Competitor Color Analysis'
@@ -272,10 +280,10 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        image: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1200&q=80',
-        imageAlt: 'Scope & Brand Strategy',
+        image: peerdomStrategy,
+        imageAlt: 'Brand Strategy',
         graphicDetails: {
-          caption: 'Scope & Brand Strategy'
+          caption: 'Brand Strategy'
         }
       },
       {
@@ -291,10 +299,10 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80',
-        imageAlt: 'Stakeholder Alignment & Strategy Presentation',
+        image: peerdomColorConcept,
+        imageAlt: 'Brand gradient concept',
         graphicDetails: {
-          caption: 'Stakeholder Alignment & Strategy Presentation'
+          caption: 'Brand gradient concept'
         },
         additionalImages: [
           {
