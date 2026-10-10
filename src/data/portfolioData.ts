@@ -178,16 +178,16 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1200&q=80',
-        imageAlt: 'V1 Built and Ready for Release',
+        image: almanacHome,
+        imageAlt: 'V1 Home page',
         graphicDetails: {
-          caption: 'V1 Built and Ready for Release'
+          caption: 'V1 Home page'
         },
         additionalImages: [
           {
             image: almanacSearch,
-            imageAlt: 'Event search and filter interface',
-            caption: 'Event search & filter interface'
+            imageAlt: 'Event search page and filter interface',
+            caption: 'Event search page & filter interface'
           },
           {
             image: almanacEvent,
