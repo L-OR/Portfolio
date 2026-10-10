@@ -4,6 +4,8 @@ import mymenuiqFlow from '../assets/images/MyMenuIQ_flow.png';
 import mymenuiqMedfi from '../assets/images/MyMenuIQ_med-fi_screens_desktop.png';
 import mymenuiqHifi from '../assets/images/MyMenuIQ_hi-fi_screens_desktop.png';
 import mymenuiqMobile from '../assets/images/MyMenuIQ_hi-res_mobile.png';
+import mymenuiqLogos from '../assets/images/MyMenuIQ_logos.png';
+import mymenuiqBranding from '../assets/images/MyMenuIQ_branding.png';
 import flyuxPersonas from '../assets/images/FlyUX_personas.png';
 import flyuxBenchmark from '../assets/images/FlyUX_benchmark.png';
 import flyuxSurvey from '../assets/images/FlyUX_survey.png';
@@ -748,14 +750,14 @@ export const portfolioProjects: Project[] = [
             caption: 'High-fidelity mobile screens'
           },
           {
-            image: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=1200&q=80',
-            imageAlt: 'Responsive Web & Mobile Wireframe Architecture',
-            caption: 'Responsive Web & Mobile Wireframe Architecture'
+            image: mymenuiqLogos,
+            imageAlt: 'Logo variations',
+            caption: 'Logo variations'
           },
           {
-            image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80',
-            imageAlt: 'Brand Identity & Approachable Warm Palette System',
-            caption: 'Brand Identity & Approachable Warm Palette System'
+            image: mymenuiqBranding,
+            imageAlt: 'Brand Identity',
+            caption: 'Brand Identity'
           }
         ]
       },
