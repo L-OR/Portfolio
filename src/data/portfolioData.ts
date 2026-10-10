@@ -163,19 +163,7 @@ export const portfolioProjects: Project[] = [
         imageAlt: 'Screen sketch',
         graphicDetails: {
           caption: 'Screen sketch'
-        },
-        additionalImages: [
-          {
-            image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80',
-            imageAlt: 'Single Source of Truth Usability & Consistency Audit',
-            caption: 'Single Source of Truth Usability & Consistency Audit'
-          },
-          {
-            image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80',
-            imageAlt: 'Sub-Event Comparison Tables & Receipts Slide-out',
-            caption: 'Sub-Event Comparison Tables & Receipts Slide-out'
-          }
-        ]
+        }
       },
       {
         number: '05',
@@ -194,7 +182,19 @@ export const portfolioProjects: Project[] = [
         imageAlt: 'V1 Built and Ready for Release',
         graphicDetails: {
           caption: 'V1 Built and Ready for Release'
-        }
+        },
+        additionalImages: [
+          {
+            image: almanacSearch,
+            imageAlt: 'Event search and filter interface',
+            caption: 'Event search & filter interface'
+          },
+          {
+            image: almanacEvent,
+            imageAlt: 'Event historical statistics and breakdown',
+            caption: 'Event historical statistics and breakdown'
+          }
+        ]
       },
       {
         number: '06',
