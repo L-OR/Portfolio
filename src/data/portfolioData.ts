@@ -472,19 +472,19 @@ export const portfolioProjects: Project[] = [
         },
         additionalImages: [
           {
-            image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
-            imageAlt: 'Competitive Benchmark & Airline Convention Audit',
-            caption: 'Competitive Benchmark & Airline Convention Audit'
-          },
-          {
-            image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80',
+            image: 'flyuxSurvey',
             imageAlt: 'Online Booking Survey & Quantitative Data Analysis',
             caption: 'Online Booking Survey & Quantitative Data Analysis'
           },
           {
-            image: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1200&q=80',
-            imageAlt: 'Remote Usability Testing Sessions & Traveler Personas',
-            caption: 'Remote Usability Testing Sessions & Traveler Personas'
+            image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80',
+            imageAlt: 'Remote Usability Testing Sessions',
+            caption: 'Remote Usability Testing Sessions'
+          },
+          {
+            image: 'flyuxPersonas',
+            imageAlt: 'User Personas',
+            caption: 'Three User Personas'
           }
         ]
       },
