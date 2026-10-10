@@ -300,15 +300,15 @@ export const portfolioProjects: Project[] = [
         ],
         infographicType: 'image',
         image: peerdomColorConcept,
-        imageAlt: 'Brand gradient concept',
+        imageAlt: 'Brand gradient concept presentation & founders consensus',
         graphicDetails: {
-          caption: 'Brand gradient concept'
+          caption: 'Brand gradient concept presentation & founders consensus'
         },
         additionalImages: [
           {
-            image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1200&q=80',
-            imageAlt: 'Visual Identity Sneak Peek & Founder Consensus',
-            caption: 'Visual Identity Sneak Peek & Founder Consensus'
+            image: peerdomLogoBA,
+            imageAlt: 'Logo evolution',
+            caption: 'Logo evolution'
           }
         ]
       },
@@ -333,21 +333,21 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
-        imageAlt: 'Landing Page & Campaign Deliverables',
+        image: peerdomPalette,
+        imageAlt: 'Color palette',
         graphicDetails: {
-          caption: 'Landing Page & Campaign Deliverables'
+          caption: 'Color palette'
         },
         additionalImages: [
           {
-            image: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=1200&q=80',
-            imageAlt: 'Sprint Wireframing & UI Component System',
-            caption: 'Sprint Wireframing & UI Component System'
+            image: peerdomLogos,
+            imageAlt: 'Peerdom logos',
+            caption: 'Peerdom logos'
           },
           {
-            image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
-            imageAlt: 'M&A Campaign Creatives & Paid Ads Delivery',
-            caption: 'M&A Campaign Creatives & Paid Ads Delivery'
+            image: peerdomBrandBA,
+            imageAlt: 'Brand identity evolution',
+            caption: 'Brand identity evolution'
           }
         ]
       },
@@ -368,16 +368,16 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80',
-        imageAlt: 'Marketing Rollout & Customer Feedback',
+        image: peerdomFavicon,
+        imageAlt: 'Peerdom favicon',
         graphicDetails: {
-          caption: 'Marketing Rollout & Customer Feedback'
+          caption: 'Peerdom favicon'
         },
         additionalImages: [
           {
-            image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80',
-            imageAlt: 'Omnichannel Newsletter & Social Media Adoption',
-            caption: 'Omnichannel Newsletter & Social Media Adoption'
+            image: peerdomEvolution,
+            imageAlt: 'M&A Landing page campaign evolution',
+            caption: 'M&A Landing page campaign evolution'
           }
         ]
       },
