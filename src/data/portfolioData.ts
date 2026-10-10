@@ -12,6 +12,7 @@ import flyuxFlow from '../assets/images/FlyUX_Flow-Diagram.png';
 import flyuxSketch1 from '../assets/images/FlyUX_sketch1.png';
 import flyuxSketch2 from '../assets/images/FlyUX_sketch2.png';
 import flyuxHandover from '../assets/images/FlyUX_hand-over.png';
+import flyuxUsability from '../assets/images/FlyUX_Usability-test.png';
 export const portfolioProjects: Project[] = [
   {
     id: 'almanac',
@@ -477,7 +478,7 @@ export const portfolioProjects: Project[] = [
             caption: 'Online Booking Survey & Quantitative Data Analysis'
           },
           {
-            image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80',
+            image: flyuxUsability,
             imageAlt: 'Remote Usability Testing Sessions',
             caption: 'Remote Usability Testing Sessions'
           },
