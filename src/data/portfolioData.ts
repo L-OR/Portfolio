@@ -510,16 +510,16 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        image: 'https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=1200&q=80',
-        imageAlt: 'Affinity Diagram & 15-Step Journey Map',
+        image: flyuxAffinity,
+        imageAlt: 'Affinity Diagram',
         graphicDetails: {
-          caption: 'Affinity Diagram & 15-Step Journey Map'
+          caption: 'Affinity Diagram'
         },
         additionalImages: [
           {
-            image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80',
-            imageAlt: '15-Step Booking Journey Pain Point Analysis',
-            caption: '15-Step Booking Journey Pain Point Analysis'
+            image: flyuxJourney,
+            imageAlt: 'Booking Customer Journey & Pain Point Analysis',
+            caption: 'Booking Customer Journey & Pain Point Analysis'
           }
         ]
       },
@@ -548,16 +548,16 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        image: 'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=1200&q=80',
+        image: flyuxFlow,
         imageAlt: 'User Flow Diagram & Five-Screen Architecture',
         graphicDetails: {
           caption: 'User Flow Diagram & Five-Screen Architecture'
         },
         additionalImages: [
           {
-            image: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=1200&q=80',
-            imageAlt: 'Screen State Sketches & Mid-Fidelity Interactive Prototype',
-            caption: 'Screen State Sketches & Mid-Fidelity Interactive Prototype'
+            image: flyuxSketch1,
+            imageAlt: 'Low-Fidelity Screen Sketches',
+            caption: 'Low-Fidelity Screen Sketches'
           }
         ]
       },
@@ -574,7 +574,7 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80',
+        image: flyuxHandover,
         imageAlt: 'Developer-Ready Wireframes & Architecture Specs',
         graphicDetails: {
           caption: 'Developer-Ready Wireframes & Architecture Specs'
