@@ -13,6 +13,7 @@ import flyuxSketch1 from '../assets/images/FlyUX_sketch1.png';
 import flyuxSketch2 from '../assets/images/FlyUX_sketch2.png';
 import flyuxHandover from '../assets/images/FlyUX_hand-over.png';
 import flyuxUsability from '../assets/images/FlyUX_Usability-test.png';
+import PeerdomBenchmark from '../assets/images/Peerdom_Color-competitive-benchmark.png';
 export const portfolioProjects: Project[] = [
   {
     id: 'almanac',
@@ -248,7 +249,7 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        image: 'https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80',
+        image: PeerdomBenchmark,
         imageAlt: 'Competitor Color Analysis',
         graphicDetails: {
           caption: 'Competitor Color Analysis'
