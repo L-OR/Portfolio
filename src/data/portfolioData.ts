@@ -1,7 +1,5 @@
 import { Project, AboutData } from '../types';
 import peerdomHeroImage from '../assets/images/Peerdom_Landing-page-before-after.png';
-import almanacBenchmarkImage from '../assets/images/Almanac_home.png';
-import competitiveBenchmarkImage from '../assets/images/Almanac_Product-Roadmap.jpg';
 import mymenuiqThumbnail from '../assets/images/MyMenuIQ_Thumbnail.png';
 import flyuxPersonas from '../assets/images/FlyUX_personas.png';
 import flyuxBenchmark from '../assets/images/FlyUX_benchmark.png';
@@ -22,6 +20,13 @@ import peerdomLogoBA from '../assets/images/Peerdom_logo-before-after.png';
 import peerdomLogos from '../assets/images/Peerdom_logos.png';
 import peerdomEvolution from '../assets/images/Peerdom_evolution.png';
 import peerdomFavicon from '../assets/images/Peerdom_favicon.png';
+import almanacHome from '../assets/images/Almanac_home.png';
+import almanacRoadmap from '../assets/images/Almanac_Product-Roadmap.jpg';
+import almanacBenchmark from '../assets/images/Almanac_Competitive-Benchmark.jpg';
+import almanacPersona from '../assets/images/Almanac_User-Persona_Markus.jpg';
+import almanacSearch from '../assets/images/Almanac_event-search.png';
+import almanacEvent from '../assets/images/Almanac_event.png';
+import almanacSketch from '../assets/images/Almanac_sketch.png';
 export const portfolioProjects: Project[] = [
   {
     id: 'almanac',
@@ -36,7 +41,7 @@ export const portfolioProjects: Project[] = [
     timeline: '2 Weeks',
     tools: ['Stitch', 'Google AI Studio', 'Claude', 'Figma Weave'],
     team: 'Personal Project',
-    image: almanacBenchmarkImage,
+    image: almanacHome,
     imageAlt: 'Almanac historical event-probability research engine interface',
     liveUrl: 'https://almanac.design',
     liveUrlLabel: 'Visit Almanac',
@@ -70,10 +75,10 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        image: almanacBenchmarkImage,
-        imageAlt: 'Six-Tool Competitive Market Insights & Benchmark Audit',
+        image: almanacBenchmark,
+        imageAlt: 'Competitive benchmark & market insights',
         graphicDetails: {
-          caption: 'Six-Tool Competitive Market Insights & Benchmark Audit'
+          caption: 'Competitive benchmark & market insights'
         }
       },
       {
@@ -97,16 +102,16 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        image: competitiveBenchmarkImage,
-        imageAlt: 'Audience Pain Points & Feature Matrix Benchmark',
+        image: almanacRoadmap,
+        imageAlt: 'Product roadmap',
         graphicDetails: {
-          caption: 'Audience Pain Points & Feature Matrix Benchmark'
+          caption: 'Product roadmap'
         },
         additionalImages: [
           {
-            image: 'https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1200&q=80',
-            imageAlt: 'Traders, Quant Hobbyist & Creator Personas Matrix',
-            caption: 'Traders, Quant Hobbyist & Creator Personas Matrix'
+            image: almanacPersona,
+            imageAlt: 'User persona',
+            caption: 'User persona - Markus'
           }
         ]
       },
@@ -154,10 +159,10 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        image: 'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?auto=format&fit=crop&w=1200&q=80',
-        imageAlt: 'One Screen, One Answer UI Design Architecture',
+        image: almanacSketch,
+        imageAlt: 'Screen sketch',
         graphicDetails: {
-          caption: 'One Screen, One Answer UI Design Architecture'
+          caption: 'Screen sketch'
         },
         additionalImages: [
           {
