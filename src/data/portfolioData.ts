@@ -710,7 +710,7 @@ export const portfolioProjects: Project[] = [
         additionalImages: [
           {
             image: mymenuiqMedfi,
-            imageAlt: 'Mid-fidelity wireframes,
+            imageAlt: 'Mid-fidelity wireframes',
             caption: 'Mid-fidelity wireframes'
           }
         ]
