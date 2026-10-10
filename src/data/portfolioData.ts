@@ -465,14 +465,14 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80',
-        imageAlt: 'User Research, Usability Testing & Personas',
+        image: flyuxBenchmark,
+        imageAlt: 'UX competitive benchmark of a flight booking process',
         graphicDetails: {
-          caption: 'User Research, Usability Testing & Personas'
+          caption: 'Competitive Benchmark'
         },
         additionalImages: [
           {
-            image: 'flyuxSurvey',
+            image: flyuxSurvey,
             imageAlt: 'Online Booking Survey & Quantitative Data Analysis',
             caption: 'Online Booking Survey & Quantitative Data Analysis'
           },
@@ -482,7 +482,7 @@ export const portfolioProjects: Project[] = [
             caption: 'Remote Usability Testing Sessions'
           },
           {
-            image: 'flyuxPersonas',
+            image: flyuxPersonas,
             imageAlt: 'User Personas',
             caption: 'Three User Personas'
           }
