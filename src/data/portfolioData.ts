@@ -27,6 +27,7 @@ import almanacPersona from '../assets/images/Almanac_User-Persona_Markus.jpg';
 import almanacSearch from '../assets/images/Almanac_event-search.png';
 import almanacEvent from '../assets/images/Almanac_event.png';
 import almanacSketch from '../assets/images/Almanac_sketch.png';
+import almanacSpecs from '../assets/images/Almanac_product-specs.png';
 export const portfolioProjects: Project[] = [
   {
     id: 'almanac',
@@ -136,10 +137,10 @@ export const portfolioProjects: Project[] = [
           }
         ],
         infographicType: 'image',
-        image: 'https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?auto=format&fit=crop&w=1200&q=80',
-        imageAlt: 'Product Principles: Reveal, Don\'t Predict & Show The Receipts',
+        image: almanacSpecs,
+        imageAlt: 'Product specs',
         graphicDetails: {
-          caption: 'Product Principles: Reveal, Don\'t Predict & Show The Receipts'
+          caption: 'Product specifications'
         }
       },
       {
